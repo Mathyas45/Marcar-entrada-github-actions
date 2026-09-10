@@ -171,6 +171,49 @@ async function handleClockIn(page) {
             await fillQuasarSelect('select-activity', 'Cumplimiento de horario');
             await fillQuasarSelect('select-project', 'Marcación de horario - UTP');
 
+            // Ajustar la salida automática para que no sea exactamente 10 horas después, sino alrededor de las 6:30 PM
+            try {
+                console.log("📝 Ajustando hora de salida automática (Auto Clock Out)...");
+                const autoClockOutBtn = page.locator('[data-testid="auto-clock-out-chip"]');
+                if (await autoClockOutBtn.isVisible()) {
+                    await autoClockOutBtn.click();
+                    await delay(1000);
+                    
+                    // Asegurar que el switch de salida automática esté encendido
+                    const switchBtn = page.locator('[data-testid="on-off-switch"]');
+                    const isChecked = await switchBtn.getAttribute('aria-checked');
+                    if (isChecked === 'false') {
+                        await switchBtn.click();
+                        await delay(500);
+                    }
+
+                    // Abrir el selector de tiempo
+                    await page.click('[data-testid="reminder-time-picker"] input.vue__time-picker-input');
+                    await delay(500);
+
+                    // Seleccionar 6
+                    await page.click('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]');
+                    await delay(300);
+
+                    // Seleccionar un minuto aleatorio entre 30 y 35 (para que parezca humano)
+                    const randomMin = Math.floor(Math.random() * (35 - 30 + 1) + 30).toString();
+                    await page.click(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`);
+                    await delay(300);
+
+                    // Seleccionar PM
+                    await page.click('[data-testid="reminder-time-picker"] ul.apms li[data-key="pm"]');
+                    await delay(500);
+                    
+                    // Cerrar el modal presionando Escape
+                    await page.keyboard.press('Escape');
+                    await delay(500);
+                    
+                    console.log(`✅ Salida automática fijada aleatoriamente a las 6:${randomMin} PM.`);
+                }
+            } catch (e) {
+                console.log("⚠️ No se pudo ajustar la salida automática, omitiendo...");
+            }
+
             const confirmBtn = await page.waitForSelector('button:has-text("Save"), button:has-text("Confirm"), button:has-text("Guardar"), button:has-text("Confirmar")', { timeout: 5000 });
             console.log("💾 Presionando botón Guardar...");
             await confirmBtn.click();
