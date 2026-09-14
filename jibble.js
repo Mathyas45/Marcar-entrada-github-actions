@@ -174,44 +174,51 @@ async function handleClockIn(page) {
             // Ajustar la salida automática para que no sea exactamente 10 horas después, sino alrededor de las 6:30 PM
             try {
                 console.log("📝 Ajustando hora de salida automática (Auto Clock Out)...");
-                const autoClockOutBtn = page.locator('[data-testid="auto-clock-out-chip"]');
+                // Usamos .first() porque Jibble duplica este data-testid en dos divs anidados
+                const autoClockOutBtn = page.locator('[data-testid="auto-clock-out-chip"]').first();
                 if (await autoClockOutBtn.isVisible()) {
-                    await autoClockOutBtn.click();
-                    await delay(1000);
+                    await autoClockOutBtn.click({ force: true });
+                    await delay(1500); // Dar más tiempo a que abra el modal
                     
                     // Asegurar que el switch de salida automática esté encendido
-                    const switchBtn = page.locator('[data-testid="on-off-switch"]');
-                    const isChecked = await switchBtn.getAttribute('aria-checked');
-                    if (isChecked === 'false') {
-                        await switchBtn.click();
-                        await delay(500);
+                    const switchBtn = page.locator('[data-testid="on-off-switch"]').first();
+                    if (await switchBtn.isVisible()) {
+                        const isChecked = await switchBtn.getAttribute('aria-checked');
+                        if (isChecked === 'false') {
+                            await switchBtn.click({ force: true });
+                            await delay(500);
+                        }
                     }
 
                     // Abrir el selector de tiempo
-                    await page.click('[data-testid="reminder-time-picker"] input.vue__time-picker-input');
+                    await page.locator('[data-testid="reminder-time-picker"] input.vue__time-picker-input').first().click({ force: true });
                     await delay(500);
 
                     // Seleccionar 6
-                    await page.click('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]');
+                    await page.locator('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]').first().click({ force: true });
                     await delay(300);
 
                     // Seleccionar un minuto aleatorio entre 30 y 35 (para que parezca humano)
                     const randomMin = Math.floor(Math.random() * (35 - 30 + 1) + 30).toString();
-                    await page.click(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`);
+                    await page.locator(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`).first().click({ force: true });
                     await delay(300);
 
                     // Seleccionar PM
-                    await page.click('[data-testid="reminder-time-picker"] ul.apms li[data-key="pm"]');
+                    await page.locator('[data-testid="reminder-time-picker"] ul.apms li[data-key="pm"]').first().click({ force: true });
                     await delay(500);
                     
-                    // Cerrar el modal presionando Escape
+                    // Cerrar el modal presionando Escape dos veces (una para la lista, otra para el modal)
+                    await page.keyboard.press('Escape');
+                    await delay(500);
                     await page.keyboard.press('Escape');
                     await delay(500);
                     
                     console.log(`✅ Salida automática fijada aleatoriamente a las 6:${randomMin} PM.`);
+                } else {
+                    console.log("⚠️ El botón de salida automática no es visible, saltando paso...");
                 }
             } catch (e) {
-                console.log("⚠️ No se pudo ajustar la salida automática, omitiendo...");
+                console.log("⚠️ No se pudo ajustar la salida automática: " + e.message);
             }
 
             const confirmBtn = await page.waitForSelector('button:has-text("Save"), button:has-text("Confirm"), button:has-text("Guardar"), button:has-text("Confirmar")', { timeout: 5000 });
