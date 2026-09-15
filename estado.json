@@ -1,101 +1,61 @@
 {
   "cookies": [
     {
-      "name": "_gcl_au",
-      "value": "1.1.1239725464.1788191577",
-      "domain": ".jibble.io",
-      "path": "/",
-      "expires": 1795967577,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
       "name": "__cf_bm",
-      "value": "QXyJLGpmHNCP8UBwaXikLjdrR.Ex8uA8Tr94MwGx1fs-1788191577.950141-1.0.1.1-gSON3yQchV1E5cwSukqctGpVZp84D0Wt2MJEhs6KhclJyBEFRluP10CmeMWWWewfhkwKVATA3cN9cFbBkEPHrz6spKwoPH9yVYD5NPSmS_2hwObiVIvJfd9Qc8.ogO4Q",
+      "value": "YJrqUwee2rEwi45yRRWVFXHyX3Dp3AcixFwPj4auADE-1789440344.533504-1.0.1.1-NeBOOaliA6UjPoBGwtGxkpkweJ4ZC9bBmfnTQ.Fs_bc7lD5mBJImcfnFe1DLAHH00ADTnECY6nmA0RzUzHxqNV2B659sIkXY3kEwdl4E66MAGGyfkKx_HJeFWPCNnzA7",
       "domain": ".hs-scripts.com",
       "path": "/",
-      "expires": 1788193377.191297,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "_ga",
-      "value": "GA1.1.81557193.1788191579",
-      "domain": ".jibble.io",
-      "path": "/",
-      "expires": 1822751597.405202,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "__cf_bm",
-      "value": "ElkBEGcbGf.hGvpi8OaZFq8_hOV7_nqMOzQeGz9P_DM-1788191578.6159182-1.0.1.1-2a1ZqgkO65xHhRao6HvAle.Z2mtoW9qFHsoXonD5Vkm9P0EdWQ8t_nGI8tlB8TFYIpDpybIzkSE6nj.t9_Nyp8f8WJZJTKwN025WyTWWQKsq.Emxsu.iDOkBuYPv4Iy1",
-      "domain": ".hs-analytics.net",
-      "path": "/",
-      "expires": 1788193378.766137,
+      "expires": 1789442146.526717,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "__cf_bm",
-      "value": "UB58zLAIVEMlMr9v5iEJ9fYrj6nJnNLQ3W1hVwW4Qxg-1788191578.7130916-1.0.1.1-1AFJNOK9yKj2PELCfJzX1c2gkn1EfhwRhMz2o3H16hfYeXj1MhKpWSdOh0BXWxsu6gBeZ13Tth223_M7itDCJqoqX5aE6GRRAP_PKIIgLj1oOjR8fVFaMLMHl4_li0lO",
-      "domain": ".hs-banner.com",
-      "path": "/",
-      "expires": 1788193378.838586,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "__cf_bm",
-      "value": "BWCh.Jml4ANZ6KnFM67mGxxeltGgCxzNLrbYdgIPTAA-1788191578.7605553-1.0.1.1-ZSsPipRno4mvgotGTBqhTz8u_xXrr0a2sSwJrmEi0xRDZYXThz569FpvwP6juAscABoiYCeCNKgNmkr6XebtAlg2FUfhdwGCK17kUnfuGfGeUgC43AK9qSbB3vmu0urr",
+      "value": "kMHiflh4BTTJByh4NLddjGQDAR8J7js6j.o6JXDdyWg-1789440344.802171-1.0.1.1-IC_gRutudeGwLRb0Q23hwx9LtLFfvNZusa85ay2xiWPlmRXTb.jAObpT_yZnkuWt_S3ujsV48xDA4tsBLJB5hEZv81jqCJxYxzWe.WHREEP_sgiyr6ocELH_ChgfbSj8",
       "domain": ".hsadspixel.net",
       "path": "/",
-      "expires": 1788193378.863664,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "IDE",
-      "value": "AHWqTUmqj21hdMqbgItC10SrnKl9vcVPml259PYawhWIOHpqfKVNHhY4cLPAw_31",
-      "domain": ".doubleclick.net",
-      "path": "/",
-      "expires": 1822751580.769374,
+      "expires": 1789442146.794878,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "__cf_bm",
-      "value": "Ljkftr3oVmiXl4AKxGh8vEWPqwBlgrmEBV6M3xGtbUg-1788191580.6794364-1.0.1.1-zFYvUrKZpTHzP2vO9QmhfLd5x8pFTL9vJ8LPa1Dz0c5ZegT7_Vju2n2LBk5zMZuONuBM1cH_5mOaAnFdk1FE9EnWlpd5uDfQxMRf5H9AYwMQ8IaRbw9LLa2MkU2sej6K",
-      "domain": ".hsforms.com",
+      "value": "CSXs3hF3ud5AYkbI82OVWcRtClI2siP1F6grAzRoAeA-1789440344.8106863-1.0.1.1-5OVyDg6dPW4Hu75Blr_LvHT8OSH4ioJmLdXIFanJPdDHU5G.u.aViGLRwb96Q3OY1Sdw5M86yahKX9sHYUqCYwFnPb2ytfOZ3JGfgRBAlnD.27a3hVMPkij3lPHGMldt",
+      "domain": ".hs-analytics.net",
       "path": "/",
-      "expires": 1788193380.89537,
+      "expires": 1789442146.935244,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "uoG9cASuc5hF9BbNScs.7sVVY2qNfElj5HnodfwUayg-1789440344.8087058-1.0.1.1-i6U3kIFL_BjdR9FZtyOsE4j1BvC4ssIlwCU20uvN.5RI7QZabIsub4BrBERK8WAhFztSXmVlyKlzijJMX8VmCdw_Y8Mqgc3FW0lcMu_scmBj4IJQd9k.3PxnUDVOxLXv",
+      "domain": ".hs-banner.com",
+      "path": "/",
+      "expires": 1789442147.713973,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "__hstc",
-      "value": "11618603.3611d2601f96369343ce6671ed968958.1788191580901.1788191580901.1788191580901.1",
+      "value": "11618603.bf18187b5e5249038fe9548a15c11972.1789440347733.1789440347733.1789440347733.1",
       "domain": ".jibble.io",
       "path": "/",
-      "expires": 1803743597,
+      "expires": 1804992367,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "hubspotutk",
-      "value": "3611d2601f96369343ce6671ed968958",
+      "value": "bf18187b5e5249038fe9548a15c11972",
       "domain": ".jibble.io",
       "path": "/",
-      "expires": 1803743597,
+      "expires": 1804992367,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
@@ -112,40 +72,30 @@
     },
     {
       "name": "__cf_bm",
-      "value": "78QyuQgt0lGT84z.boSWJL5hk8k9jReOTbpOet14ewM-1788191581.256878-1.0.1.1-mVMtXbMbNT42oVQdz5g1KdAY2jBzopnwdy_4ZHSiRn4zDC.xR24LVm2MiXMWGHLHDnyEtBUk.a79DQYlmZYcQDGFVMVh49_kftZZ3cBH9HfDfNHwID6xMMNteBUrG1u6",
+      "value": "50yQWWAIZftLmyBXny5b1ee6ibKJ9FZRY6d69NKR_cg-1789440346.0152223-1.0.1.1-jbU1TY4ZmgrnhlkNJgPfyv29qCBeoHVfz0CIbUPuASaH_iez0_IHPol5E87SyFaNdcXLtyLhBPfilZQWgkjG8T0_LL2AUT7T8G6grop4ayuIO.cT7Wn7_yfXoHRHqgQ3",
       "domain": ".hubspot.com",
       "path": "/",
-      "expires": 1788193381.481583,
+      "expires": 1789442148.047498,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "_fbp",
-      "value": "fb.1.1788191582691.754823470556414898",
-      "domain": ".jibble.io",
+      "name": "__cf_bm",
+      "value": "gGewYOIUVrnBFcYoGHl_FwUbKjwBOZH2VN3joI746ug-1789440346.4264967-1.0.1.1-mdRyy_KfA62bQLsIXdxJN5quvIpmpf1ePdxSYnz62G4g7DMPrOnGEifaZKHInn_e4lQm0z5vGNws_pvg145Q_70fWinEiyaY1ENFEZZVaTLIScWxEyhG5GxVtv5BwntJ",
+      "domain": ".hsforms.com",
       "path": "/",
-      "expires": 1795967597,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "fr",
-      "value": "0L63SUsh9UN2BJLPw..BqlaNe...1.0.BqlaNe.",
-      "domain": ".facebook.com",
-      "path": "/",
-      "expires": 1795967582.913859,
+      "expires": 1789442148.4746,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "intercom-id-pp7sdr39",
-      "value": "ad37349e-509a-4edb-854f-724cd2e1a2e0",
+      "value": "a1af6dd3-e331-4717-a3c0-14b3c64a376c",
       "domain": ".jibble.io",
       "path": "/",
-      "expires": 1811521597,
+      "expires": 1812770367,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -155,24 +105,24 @@
       "value": "",
       "domain": ".jibble.io",
       "path": "/",
-      "expires": 1788796397,
+      "expires": 1790045167,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "intercom-device-id-pp7sdr39",
-      "value": "a17dd240-9838-4e41-9ae1-8ff1ebd8cc19",
+      "value": "7686fed9-16e4-4e21-807a-c69994d820f8",
       "domain": ".jibble.io",
       "path": "/",
-      "expires": 1811521597,
+      "expires": 1812770367,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "idsrv.session",
-      "value": "D430EE0AAE11AF47E51B4B8DDA14E739",
+      "value": "590B4B187C963C780F7BA0048BCB6240",
       "domain": "identity.prod.jibble.io",
       "path": "/",
       "expires": -1,
@@ -182,40 +132,30 @@
     },
     {
       "name": ".AspNetCore.Identity.Application",
-      "value": "CfDJ8Mxr99Hpi5RJh8yhD4cdQlxhByfGvvMWjShU0Ktm-1SZ8MIDGQP_-_2pOaElxMCQUvSOuYkj5YHyvR_2mTxIYC3AfBuucqkHSUGiS5n3vMimZRz4ltNG_0LpJOUeH1HstIlZH6liSZv-Z6p1Im0TURxLlPLCSy5q4tpdXS7BGVdE_Js2f-y5PEHBZI2b1iriIn_wviCwP9AQJl-M95Z-79-qg3B2pzBZ3hhUQbI5rfLN4CBT7ZtpuUH33l6o9Cf-3a5oKnBWGfj-HG-Ng4hoy_Wi2k3MSSq-sfucqpbhbgLB-1K2PL1YdEPUdXiDHBXWnbkqbWrdPVzB1wcLRkdfF7B6oNL2Ndwr38otO_dnTwlEzwhI4XMSVQ9Opwc696ttvefKFzDiVjSMDlstgyP2mifoUy-zw2Ojx6gFzrLtI0Td0hQlHZq2wjGLoTpMmYx498Jipz_KTuxFDWndmQw5Re72fQW-3iLGtaP3YBWl3JMN4AHM9Gkwuw8vUlICm8SG0XW9nlI8M0mp2fqF4LyU6E_mIPsTjF9ogZWbOb6BvpH-Bn-62OWic-pkKnnw_1cXO9Ml49Jr35SusxBMzhvTiZpQgNYQEsh6Wiy2o-LINrqZsCGAMYZJ1GIzYNz_-yF_RlXXm-oDGNBfm5E3C27WnBHTl-091qC0fwnmp3sboq_2ojR2BJ-itl9CK6nwLoUpDapuOaUfcnCkwOWqe3FAMEJM9NN7YtqnU97hb8TxfFsfBEqq-5i0VyG0GLvqU65G2QBazjJDq1JAoJ4861yCjusKZoDlJCtRhD3ENfCa0Gjic4wOSisrIsCWOpg_wThwdIeczYDZWivrjF-6uTSCHjgePbjifw8Nn5_-UAoIm-tr1OUhJgZVcOZ7yAuQokeGVlpOw4tMrBOwN2y3pev1tvYN41Pfx06rJ0CXi5omJVYxFnkYp1V9HaA9ql9keRbZqUfXSgMWx5mG7KgTWg2KqgEJJkNSHMaEaOjGSXZN8LifTbzKkQ9RHORncHph7wUOXRCpx44FfKMlHaTepMYpW28d-xqcjy12o3bC1EjTzPdTfnDvxR_I7C68CsForAQ5Jk1csEouHZLeMpBrNoFiR-eJ7AZOmVhjrOcZERt1JiVwwTLr8Kff7OCp2xFCL86XtaZkf9C8FAYXLnG2X8zr2xAYoLSG4xrrylZ-SB-O7t-oDtVtyiPO1VxksolOgDElBaT0ocH9YXma9NOq83t8z0027LyzURTsjgcx5W_NqkLezXwNpudOXZFfY4iisW7Llqh7FM7VszsGmsGDfby_Cc1xX8mKbnLioUHFWwNnlfE_dee50osb7m2w5Iw675d9JX9pdv31GpmGpfXtHKLrQTKDnymARi5hkEtt7haCQmfmDMe00ZDoEAVPUvRwayFTMg",
+      "value": "CfDJ8Bg3fMg1dwVGlSxf7WQN5u4c9DZnAs9kzW852bWcf0rfKJESbtveorvxmWcV9szwK7dJEj1m3gMtmDVGV84HHJv-dFdGxXbOmnBIPy1GxvYtMhsiR2E9CeWxN7br58CwofbvefiT3-Uc1yGBco4amqZxzxHXoqz26QWSkDxWUilkej68al8iZzhKRX6X95RgAn-jriPtjBA0r3HQY3TEUH1zC6_CW6E0B39VO3FGzVtRlMKCzpibOACyNdwhBIzNgrIuXJ5DhgUPGEGYBeeKoNrnJNgtpWjRwJ1bKczW-YpwAQfevb_6CNuUKJ416lmNO6YzIOXPfWhMzKWsB9-jKWfAmSpW9OaZtZ8C8U1pkFL-XDQHan93rBdzV3hzi28m-PXBT31wVqIrzTciaKR8cTLMMNV8CvDBjOkTgvHMjPt1kPy6MBHYMrcNFq2uYe0h5mKQjX5FBMZhDBvjG8eyEa6UWOOL6tozv1YfXuxgajkF5IXp4BuX6nMaromvL6pjX3US49EkYdYBwzaouw14ZNky3UDua_3QOUEC32iLY6nmpXHEIRSxn41eaIPn_6AGNaMaJH9RQWFWhOAnneiSRCHukz-DQ2srhFoA6_ijNQbnhdX3gKKxFBup_eaa4EzEhmtX11rYEgLVgieu7LVsylRvWTOuHPkSuNDNfUQ_gGQQnTfo6bXjwGwmhUVj74hVOw_2omMQJ8hjsvA_Z8rJ0LkjgPx1gNE8KVeRw3bru45atjUiotE-OkMWgF_mJDZTTMM2ExusTwvE0TSHOL1eE4lyRPqO_6lB-PZUIOAOU9kE0eEHgfTJsSHoJs0ihwggqtJz0m8pDE0ijbeg9xVQ-ghHSypHkCr6RK2EdVFt7x4yngQrKGaahiLxW21EulMoHsf0KqTfSZFPI06J0C8xTZ3buehUGnzfHAf0Z-2fNIhj1CD1Pxype90QV1gbyqtEjJ47pwQnQk2U-DYT5uRPadu6IXWpCveomw99MrMBVZx2ntir8nfiD3cLpLgxWnsVv9ZIDEg3nA5ZqK9JvLR--zfbz3oOqYfANcYe3Y_HblPbeYNOLV-JL_Z5EN78DEjabbSmB8GJOIv4iwD4_dfc4EfCYmC3rNfGFCDI7b3Zqc9vSgLKfPznPtK9sPgdWU1_Ws7vFJ0ImVxob2Mmu9qIaStZZuXTzfZlPiqYCsSyZRNu4T2tKJ3gBSSronHKvIuYkPoQ024e26b8vL5MnlUZ3qiV9Xr30E6OvsbJ5SbCsJicl5hN5Gqm8saGqb9HK9sUw5ggnbDuvO9SBBOz6ckxIu1kfeV8XzAg_8B7us2sJkL0T4BoN7qlHMVkA_KbF4z9U4Cn6keIEkoydw_2qzQlWutuxcIHxQJ2oYjjFhp1m5o2Fi3MttoJq2nkuCS9GvEyqw",
       "domain": "identity.prod.jibble.io",
       "path": "/",
-      "expires": 1789401194.427947,
+      "expires": 1790649965.227859,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "_ga_GB6MJWXV2B",
-      "value": "GS2.1.s1788191578$o1$g1$t1788191597$j41$l0$h1643375291",
-      "domain": ".jibble.io",
-      "path": "/",
-      "expires": 1822751597.046811,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
       "name": "__hssc",
-      "value": "11618603.3.1788191580901",
+      "value": "11618603.3.1789440347733",
       "domain": ".jibble.io",
       "path": "/",
-      "expires": 1788193397,
+      "expires": 1789442167,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
-      "name": "_ga_C24TJ3ZS3Z",
-      "value": "GS2.1.s1788191580$o1$g1$t1788191597$j43$l0$h1402917617",
-      "domain": ".jibble.io",
+      "name": "gbuuid",
+      "value": "d948d17c-a082-4383-ac0f-832b20969552",
+      "domain": "web.jibble.io",
       "path": "/",
-      "expires": 1822751597.418435,
+      "expires": 1824000370,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -227,11 +167,11 @@
       "localStorage": [
         {
           "name": "intercom.intercom-state-pp7sdr39",
-          "value": "{\"app\":{\"openConfig\":{\"unifiedStyling\":true,\"openTo\":\"home\",\"spaces\":[{\"type\":\"home\",\"label\":\"Inicio\",\"navigationLabel\":\"Inicio\",\"badge\":null},{\"type\":\"messages\",\"label\":\"Mensajes\",\"navigationLabel\":\"Mensajes\",\"badge\":null},{\"type\":\"tickets\",\"label\":\"Tickets\",\"navigationLabel\":\"Tickets\",\"badge\":null},{\"type\":\"tasks\",\"label\":\"Tareas\",\"navigationLabel\":\"Tareas\",\"badge\":null}],\"userHasReceivedChecklists\":false,\"userHasLiveNewsfeed\":false,\"userHasTickets\":false},\"selfServeSuggestionsMatch\":false,\"name\":\"Jibble\",\"features\":{\"anonymousInboundMessages\":true,\"googleAnalytics\":false,\"hubspotInstalled\":false,\"inboundMessages\":true,\"marketoEnrichmentInstalled\":false,\"googleAnalytics4Integration\":true,\"improveOpenBehavior\":false},\"helpCenterSiteUrl\":\"https://help2.jibble.io\",\"inboundConversationsDisabled\":false,\"isDeveloperWorkspace\":false,\"customGoogleAnalyticsTrackerId\":null},\"launcher\":{\"isLauncherEnabled\":false},\"launcherDiscoveryMode\":{\"hasDiscoveredLauncher\":true},\"launcherSettings\":{\"alignment\":\"right\",\"color\":\"#858585\",\"colorDark\":\"#858585\",\"hasRequiredFeatures\":true,\"horizontalPadding\":20,\"instantBootEnabled\":true,\"launcherLogoUrl\":null,\"launcherLogoDarkUrl\":null,\"messengerLayout\":\"widget\",\"messengerModeSwitcherEnabled\":false,\"secondaryColor\":\"#FF7A21\",\"secondaryColorDark\":\"#FF7A21\",\"showLauncher\":false,\"themeMode\":\"light\",\"updatedAt\":1788188826,\"verticalPadding\":20,\"isLoading\":false},\"user\":{\"id\":\"6a95a35e87ca4e23fefd1205\",\"role\":\"visitor\",\"locale\":\"es\",\"hasConversations\":false},\"message\":{},\"conversations\":{\"byId\":{}},\"openOnBoot\":{\"type\":null,\"metadata\":{},\"lastOpenAtTimestamp\":1788191598087},\"operator\":{\"lastComposerEvent\":0},\"router\":{\"isInitialized\":false,\"navigationQueue\":[]}}"
+          "value": "{\"app\":{\"openConfig\":{\"unifiedStyling\":true,\"openTo\":\"home\",\"spaces\":[{\"type\":\"home\",\"label\":\"Inicio\",\"navigationLabel\":\"Inicio\",\"badge\":null},{\"type\":\"messages\",\"label\":\"Mensajes\",\"navigationLabel\":\"Mensajes\",\"badge\":null},{\"type\":\"tickets\",\"label\":\"Tickets\",\"navigationLabel\":\"Tickets\",\"badge\":null},{\"type\":\"tasks\",\"label\":\"Tareas\",\"navigationLabel\":\"Tareas\",\"badge\":null}],\"userHasReceivedChecklists\":false,\"userHasLiveNewsfeed\":false,\"userHasTickets\":false},\"selfServeSuggestionsMatch\":false,\"name\":\"Jibble\",\"features\":{\"anonymousInboundMessages\":true,\"googleAnalytics\":false,\"hubspotInstalled\":false,\"inboundMessages\":true,\"marketoEnrichmentInstalled\":false,\"googleAnalytics4Integration\":true,\"improveOpenBehavior\":false,\"messengerErrorCallbacks\":false},\"helpCenterSiteUrl\":\"https://help2.jibble.io\",\"inboundConversationsDisabled\":false,\"isDeveloperWorkspace\":false,\"customGoogleAnalyticsTrackerId\":null},\"launcher\":{\"isLauncherEnabled\":false},\"launcherDiscoveryMode\":{\"hasDiscoveredLauncher\":true},\"launcherSettings\":{\"alignment\":\"right\",\"color\":\"#858585\",\"colorDark\":\"#858585\",\"hasRequiredFeatures\":true,\"horizontalPadding\":20,\"instantBootEnabled\":true,\"launcherLogoUrl\":null,\"launcherLogoDarkUrl\":null,\"messengerLayout\":\"widget\",\"messengerModeSwitcherEnabled\":false,\"secondaryColor\":\"#FF7A21\",\"secondaryColorDark\":\"#FF7A21\",\"showLauncher\":false,\"themeMode\":\"light\",\"updatedAt\":1789398391,\"verticalPadding\":20,\"isLoading\":false},\"user\":{\"id\":\"6aa8b15a3dcf72a6c8236d29\",\"role\":\"visitor\",\"locale\":\"es\",\"hasConversations\":false},\"message\":{},\"conversations\":{\"byId\":{}},\"openOnBoot\":{\"type\":null,\"metadata\":{},\"lastOpenAtTimestamp\":1789440368146},\"operator\":{\"lastComposerEvent\":0},\"router\":{\"isInitialized\":false,\"navigationQueue\":[]}}"
         },
         {
-          "name": "lastExternalReferrerTime",
-          "value": "1788191582377"
+          "name": "jibble.authorizedOrganizationId",
+          "value": "a3aab708-8dbf-48dc-88da-a32f83a4665e"
         },
         {
           "name": "jibble.loggedInUsername",
@@ -239,19 +179,19 @@
         },
         {
           "name": "oidc.user:https://identity.prod.jibble.io:spa.client",
-          "value": "{\"id_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjkxOTQwQ0I1M0ZFQjhEMERGNEI1QzZBODdERjM4NkNGNDdBQzE5MjdSUzI1NiIsInR5cCI6IkpXVCIsIng1dCI6ImtaUU10VF9yalEzMHRjYW9mZk9HejBlc0dTYyJ9.eyJuYmYiOjE3ODgxOTE1OTksImV4cCI6MTc4ODE5MTg5OSwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5wcm9kLmppYmJsZS5pbyIsImF1ZCI6InNwYS5jbGllbnQiLCJpYXQiOjE3ODgxOTE1OTksImF0X2hhc2giOiJkUENtc21ka1Z6OV8xNGU1NU5rQXRBIiwic19oYXNoIjoibEc5RkVBRTJ1U1V6UkI5UkQ1R3UxUSIsInNpZCI6IkQ0MzBFRTBBQUUxMUFGNDdFNTFCNEI4RERBMTRFNzM5Iiwic3ViIjoiNzlhNzA2NGMtMGVlMy00OTJjLWJkNzYtYmU4MzE0NGFlMDk0IiwiYXV0aF90aW1lIjoxNzg4MTkxNTk0LCJpZHAiOiJsb2NhbCIsImFtciI6WyJwd2QiXX0.WFpa3OFIa_M8CFJPDZ9rpUUJXGf0cQV0spTPMsXoaAFgoth8xYdUW3jyEL3VuGVlIrxKHsKKKSc_Kje_RizHUcF9N6x21qI24CicgD4KmfqkjnIWaLauEl8As2nnCWIPLGfXHowGvqNOtVJLeoUWiahRiKOTpORJEtuIdb4GVzx4BV8Aj91ChScHxlZd4VB6bfjGr2skDseTnYzO5bKe4yjYLbFajm1HbYHJYotmzry4CCPQRaWdV60Ds5nmoLYZr-TgXhtJ-0_Gw0JgCyZ3oD_6jd-lLjT2s83rg6jZQIE8L0uAaR65eF_aJCXAtarK65XeEVXpQCfNnLeAFDhmeFqe1xuE5vAmqpAYmVc4cP4kY6XzEE3N1wMu20-nt5zCjKi8KyiF5WTeOC3-tOycwJRbEz_Ljo_yO1TMjAOVW3fYYqaq3uH2gA8HHk2rcqo9WFIHZohNU2OSJgks-vxmfm_qug16zfVFzED9gVpT_PsfTo8mUFk4SWKEoBmhcjxR3sS08NchLcw4NngX3yEeOYaf0hYV7Fbbx0LTzNRdHC3gkKrg-2O3AwoKvGzmjtm5AAGnT7DY0N2G2Z1lQU1T0faVCKjNET3UOW6I3hTwj14o_zHfHmwRBTKY9LZuSWiyZNZLOQsY0uhV1A8beLrHLEI8uJ-Yt40_tlg_7_OUlBM\",\"session_state\":\"nvP1OFqrEgAUkTbQJPw6SBKSa6jqmnMn9tYz6Xa1IzM.F7A39385626D922DEFE7E4BB682D990C\",\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjkxOTQwQ0I1M0ZFQjhEMERGNEI1QzZBODdERjM4NkNGNDdBQzE5MjdSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6ImtaUU10VF9yalEzMHRjYW9mZk9HejBlc0dTYyJ9.eyJuYmYiOjE3ODgxOTE1OTksImV4cCI6MTc4ODI0OTE5OSwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5wcm9kLmppYmJsZS5pbyIsImF1ZCI6ImFwaTEiLCJjbGllbnRfaWQiOiJzcGEuY2xpZW50Iiwic3ViIjoiNzlhNzA2NGMtMGVlMy00OTJjLWJkNzYtYmU4MzE0NGFlMDk0IiwiYXV0aF90aW1lIjoxNzg4MTkxNTk0LCJpZHAiOiJsb2NhbCIsIm5hbWUiOiJNYXRoeWFzIEFsb256byBDb3JvbmFkbyBNYXJ0w61uZXoiLCJlbWFpbCI6Im1jb3JvbmFkb0B0eW5wdS5jb20iLCJwaG9uZV9udW1iZXIiOiIrNTE5NTg3ODg3MDQiLCJwcnNpZCI6IjNiNDU0YjUwLWMwZmMtNDdhNy04YjE4LTllMGRjOTdlZDFmNCIsIm9yZ2lkIjoiYTNhYWI3MDgtOGRiZi00OGRjLTg4ZGEtYTMyZjgzYTQ2NjVlIiwicm9sZSI6Ik1lbWJlciIsInNpZCI6IkQ0MzBFRTBBQUUxMUFGNDdFNTFCNEI4RERBMTRFNzM5IiwiaWF0IjoxNzg4MTkxNTk5LCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiYXBpMSIsImVtYWlsIiwicGhvbmUiXSwiYW1yIjpbInB3ZCJdfQ.lQdJeVxVwkM5AbABsqRvX1UI2UHYI4XUKt3Pu2k9C2iOM_XWjgiwbWRFpV7Im9PN3s6yVTBa1FpgjCMt_bA4v5f-YTC0ZKnCiSVJy6JsxHMmjeGxm4HFxPSxjVC913IKDoAotdWzXR_9LexocWD7tXY9PG0GQAjBg9ERXzMmuRKpHCb_GvU4M39ZnpZr-ZpzTxbEEETKnWcqIqKgvBSgYuYrHYg67G0Vg6wQ2JwAYPOaSapFpu0GFYFPsoCoYk_v04b3g7YEUCM9XF72iSyr0lhwi4kFDjlXsckQKf7F1Z-ziszq4UzrRacc60us4F6Fp6FGrKfAKEchoC93Y_0L5s8kZrwRzHQkWivRGxKa977WcZasd9hXRFRgp6av-xwIyPZzhgzjNzcdUzTeYltuJQulqg8CHaSPMJLjwHpCHGWan9g4lztRmmnJK9HR0kYIK7o-I4RMO8w9LIvfbd7pWD759rd3UHtpV0eScF6l8b-iZcOaQcr1hf_QrbJ4J2qHLbSm3WqeWVByJACNXbQPZyindquoPzngl3F8CxPLIEMGnSLdOJgbs8oH8wGKXMXqa6d-u5Dmn2C44ccWmv8sHgfDjP9PppasjlKkGUPBlyouO-u_xPcrGLxSDoDwlpjgPRUqtVhfnE-GtzfF1BuCC6-vFcNTHvxEuWiimkSbGWA\",\"token_type\":\"Bearer\",\"scope\":\"openid profile api1 email phone\",\"profile\":{\"exp\":1788191899,\"iss\":\"https://identity.prod.jibble.io\",\"aud\":\"spa.client\",\"iat\":1788191599,\"s_hash\":\"lG9FEAE2uSUzRB9RD5Gu1Q\",\"sid\":\"D430EE0AAE11AF47E51B4B8DDA14E739\",\"sub\":\"79a7064c-0ee3-492c-bd76-be83144ae094\",\"idp\":\"local\",\"name\":\"Mathyas Alonzo Coronado Martínez\",\"email\":\"mcoronado@tynpu.com\",\"email_verified\":false,\"phone_number\":\"+51958788704\",\"phone_number_verified\":false,\"prsid\":\"3b454b50-c0fc-47a7-8b18-9e0dc97ed1f4\",\"orgid\":\"a3aab708-8dbf-48dc-88da-a32f83a4665e\"},\"expires_at\":1788249199}"
-        },
-        {
-          "name": "lastExternalReferrer",
-          "value": "empty"
-        },
-        {
-          "name": "_gcl_ls",
-          "value": "{\"schema\":\"gcl\",\"version\":1,\"gsid_dc\":{\"value\":{\"joinId\":\"ApHNbP5T1cYNBZpOAwSd_p05womKwaWnRw\",\"lastJoinedTimeMs\":1788191577348},\"expires\":1788191877348},\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1788191577356},\"expires\":1795967577356}}"
+          "value": "{\"id_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjkxOTQwQ0I1M0ZFQjhEMERGNEI1QzZBODdERjM4NkNGNDdBQzE5MjdSUzI1NiIsInR5cCI6IkpXVCIsIng1dCI6ImtaUU10VF9yalEzMHRjYW9mZk9HejBlc0dTYyJ9.eyJuYmYiOjE3ODk0NDAzNjcsImV4cCI6MTc4OTQ0MDY2NywiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5wcm9kLmppYmJsZS5pbyIsImF1ZCI6InNwYS5jbGllbnQiLCJpYXQiOjE3ODk0NDAzNjcsImF0X2hhc2giOiJRR3BMWVVzWElsTjVaaTN2SHBWRFJBIiwic19oYXNoIjoiUTZyV0FWOTEtbG42OE5Odms1TE81USIsInNpZCI6IjU5MEI0QjE4N0M5NjNDNzgwRjdCQTAwNDhCQ0I2MjQwIiwic3ViIjoiNzlhNzA2NGMtMGVlMy00OTJjLWJkNzYtYmU4MzE0NGFlMDk0IiwiYXV0aF90aW1lIjoxNzg5NDQwMzYzLCJpZHAiOiJsb2NhbCIsImFtciI6WyJwd2QiXX0.RLHQTzBsxr0OUC0g02r32UCbOaoiFYLvr6Aa_sz1sIpO20alSvW2s9FAsaMR_4Dz5NZe5j1qg25ryttUbPvQYMad-AOwP42zYslTVg2GoVnjhhL4yFM3umudoweprsjJULjzRF72fo62M_F_CHMlYDjaylwqTKjiB7s6NXv_kgC9HkM6pEvaXjX3PpL2wdqxSJGK800cdOD1p-1vgNR1lQXuY4SzzFcJsHeXJmluOY4NHsWiniYPTI0I5NbrMy_AdmxB9uWlewMZAT0S8GzUh-zAn_70U_AH9XlLSotCAyQSMPShZl_dV0vppPCsMAjEJrI0P1fWTyYoB1iHlmlONoHfuBG0PitX-jOJjuCfjrFTE4kQcJBUe6zycjj-8Z2HSg8AMUhaqoBEdc2mI8fpnpW6O_eW32rKl2pVPGzq8-6QHTPAyzi8OnM8Nex5HFjIRXZ7mYYvqNXLzlFnu1f5XjnkcF_VpgjIGPYE9tQMx5F9Qq2j5sXbH8-VFluNQZWhtr84LUZTIq3Ubz-9uUN8ndKYGVj7yBUsd6LIoBoPaFln6JFekaiEO_o5WggfM8n_GvrE-3XLPKUGfQR0-fKZ2uNN_sxzF87p5St0_nJBv-VshO7zyN3YsnmYJCqv75QLbhatYyrduFHof_2uGkMorbahuV-xryXycy5hhdDHWm4\",\"session_state\":\"0WS-M6SvOTn7oD9imsEbMtjB8IlLw8tDRxoGtdBgbu8.2C3E239762611D16EBF4B13985A5EF32\",\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjkxOTQwQ0I1M0ZFQjhEMERGNEI1QzZBODdERjM4NkNGNDdBQzE5MjdSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6ImtaUU10VF9yalEzMHRjYW9mZk9HejBlc0dTYyJ9.eyJuYmYiOjE3ODk0NDAzNjcsImV4cCI6MTc4OTQ5Nzk2NywiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5wcm9kLmppYmJsZS5pbyIsImF1ZCI6ImFwaTEiLCJjbGllbnRfaWQiOiJzcGEuY2xpZW50Iiwic3ViIjoiNzlhNzA2NGMtMGVlMy00OTJjLWJkNzYtYmU4MzE0NGFlMDk0IiwiYXV0aF90aW1lIjoxNzg5NDQwMzYzLCJpZHAiOiJsb2NhbCIsIm5hbWUiOiJNYXRoeWFzIEFsb256byBDb3JvbmFkbyBNYXJ0w61uZXoiLCJlbWFpbCI6Im1jb3JvbmFkb0B0eW5wdS5jb20iLCJwaG9uZV9udW1iZXIiOiIrNTE5NTg3ODg3MDQiLCJwcnNpZCI6IjNiNDU0YjUwLWMwZmMtNDdhNy04YjE4LTllMGRjOTdlZDFmNCIsIm9yZ2lkIjoiYTNhYWI3MDgtOGRiZi00OGRjLTg4ZGEtYTMyZjgzYTQ2NjVlIiwicm9sZSI6Ik1lbWJlciIsInNpZCI6IjU5MEI0QjE4N0M5NjNDNzgwRjdCQTAwNDhCQ0I2MjQwIiwiaWF0IjoxNzg5NDQwMzY3LCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiYXBpMSIsImVtYWlsIiwicGhvbmUiXSwiYW1yIjpbInB3ZCJdfQ.sDHBqQXoygN2lkb9XBlnTEFdxT2Qutun5vpC63gNH9J2GLWx7-r6AOC4T5AcVnTNu5gBgZZ-TsUVDXBDBJ0hMkmzbx0US5NB7nNnaZ9seKMUCneLGwgMlO6gcd2xfVpwqxt7DBva6NoFUIndA1G8eepM-DzX8dbPoGKeafO0dgbJ0JaQg5fBWCPDrCrwvAem-fGHVD4RnmuDy1uAWRANuFdXLPKFy_646pldjzMUUF_3xzgTHd1Qk1yz59b9k1g4lJp_4Z2u-WxtFT7H-7lfy2WbfxGeNNYmv8lGVHICp19Q4HKqqKtIEwdpFqfy2CC-7dAD9YRC3xxTc4AllyJhFYAIq48KwQXUbqWGXQ1hi0q17wukS7sa_wn3Z8Vc-4UOwgMxR78WVP9LDGFpKll9gVt0SV2rh7TxVhYkNYLpLCLiAYrDRaN7X4MEL9-hIpajKXiFz1jYJXNk92O9U7yZ3M92yoCr7d4fV97OR1-xptDl2Y-x6PveZZVTpikxi-KqztBBUC8YpvkUMvJDSDzhZ-I2_WyFXo7dRwAf65yonNkGKHJoJncgNWaAX41dV_IjWGjDGh1YLLa23RQ-OaW5fkKgnkUPe0Phhj4xTWoGmeJZN4vNHKM6ZPQThM8toGk16uSBOiXc4UxZeOAyrMqQZvMiKLZC_jofMMav9tjiHS4\",\"token_type\":\"Bearer\",\"scope\":\"openid profile api1 email phone\",\"profile\":{\"exp\":1789440667,\"iss\":\"https://identity.prod.jibble.io\",\"aud\":\"spa.client\",\"iat\":1789440367,\"s_hash\":\"Q6rWAV91-ln68NNvk5LO5Q\",\"sid\":\"590B4B187C963C780F7BA0048BCB6240\",\"sub\":\"79a7064c-0ee3-492c-bd76-be83144ae094\",\"idp\":\"local\",\"name\":\"Mathyas Alonzo Coronado Martínez\",\"email\":\"mcoronado@tynpu.com\",\"email_verified\":false,\"phone_number\":\"+51958788704\",\"phone_number_verified\":false,\"prsid\":\"3b454b50-c0fc-47a7-8b18-9e0dc97ed1f4\",\"orgid\":\"a3aab708-8dbf-48dc-88da-a32f83a4665e\"},\"expires_at\":1789497969}"
         },
         {
           "name": "jibble.REDIRECT_PATH",
           "value": "/"
+        },
+        {
+          "name": "jibble.user(79a7064c-0ee3-492c-bd76-be83144ae094).growthbook.lastActiveDay",
+          "value": "2026-09-14"
+        },
+        {
+          "name": "gbFeaturesCache",
+          "value": "[[\"https://cdn.growthbook.io||sdk-wAjmxh8gVzeSfts\",{\"data\":{\"status\":200,\"features\":{},\"experiments\":[],\"dateUpdated\":\"2026-09-14T15:01:36.251Z\",\"encryptedFeatures\":\"D1iidLZx3uG1lmviqki+qQ==.qZs+caq3+PI2yfcYLXULjJg2MLD50ocoqUyNusMEx6uJHcsXPVye1w58R1cVtS77PlD+pRC+4/n0aHD0dUS4vgmKr3iR51Qkp+ARot5xZkCp17bkQ/z06RkbjjxDpiVvYNvBDcqoLKKq0DyKWKtyz/1AEFbs83VIk7k1IGKhxZ+HjA4OPdyqPUJdgd2RMqJm1A8Ec9yedkipFYWlGfuDCqlfbWIsyWIqroklOaB0sBU89OHwMjSlH0/BDfy8qtaeiRsf07t4u9BoL9p996VQWPn+YKjHgVOyqtk2ErPKYLeh1R4NvVeQqEIT1Rs/FObZ8zpoyo+uwR/ZJetSjLjmcdNZX5C4dWmDF2KwYyqFIDMGaiH+ZsF8EWJJPJCyUR9VXtO/unQ2VfikYHSY/m90xKxqPO9zfTJJ3YLTcsHzsc2CxmMh0c+J5BSqjk+f/HFr0fcmub7nEzXa3jSBKPaXSlNHqDrNWIOLszA01ZlDoOTaM28XkDItFddMZGlwcHqlUfUZ05+ykhyalKkgimENzZ1x2tSPudIjlIbvXWdTPR/xreQ22Y/BTeqWV+sKsYdxHcxrEoHWXBjYFp9RAw/b050gxQQJFNoWNPXloSFr48eCZXsPq3MJ2Y5c1CVUsBDqFlSFWVJM/9DH99WQxrF64zWYUciro6IWofdAPNq+RJJJ66ehVtEwHGq+2dNKZScgP8oCid2u6yLXO8IjGDYWX499WYFYW6tGrh1HGHBe+Gqul5krA80q558pINMp+dJbbyIXhstXB9NKG+b+f7TzWjJbsqgh1U8lKnXt89iXwpckpgNTOUD+ad5GCcr0N/DMjQ+pzUkBgVq/JwHj6uAfyQO5SIgOAgWHszaAO08z4iw=\",\"encryptedExperiments\":\"Ua5qEG8dF5SvjGkZqG9cfw==.p/Sz2ddb73lyHuKqwelXQA==\"},\"version\":\"2026-09-14T15:01:36.251Z\",\"staleAt\":\"2026-09-15T02:47:10.982Z\",\"sse\":true}]]"
         }
       ]
     }

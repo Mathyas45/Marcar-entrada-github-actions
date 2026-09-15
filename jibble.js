@@ -66,8 +66,18 @@ async function run() {
         // Vamos a la página principal y dejamos que Jibble nos redirija al panel correcto
         await page.goto('https://web.jibble.io/', { waitUntil: 'networkidle' });
 
-        if (page.url().includes('/login')) {
-            console.log("🔑 Pase VIP no detectado o expirado. Iniciando sesión manualmente...");
+        // Esperar a ver si entramos al dashboard o nos rebotan al login por Pase VIP expirado
+        try {
+            await Promise.race([
+                page.waitForSelector('.q-header', { timeout: 15000 }),
+                page.waitForSelector('[data-testid="emailOrPhone"]', { timeout: 15000 })
+            ]);
+        } catch (e) {
+            console.log("⚠️ Tiempo de espera inicial agotado.");
+        }
+
+        if (page.url().includes('/login') || await page.isVisible('[data-testid="emailOrPhone"]')) {
+            console.log("🔑 Pase VIP expirado (duran aprox 14 días). Activando inicio de sesión manual de respaldo...");
             
             const emailSelector = '[data-testid="emailOrPhone"]';
             await page.waitForSelector(emailSelector, { timeout: 15000 });
