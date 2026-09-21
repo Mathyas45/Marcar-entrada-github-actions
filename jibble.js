@@ -111,6 +111,29 @@ async function run() {
         await delay(4000); 
         console.log("✅ Inicio de sesión exitoso y Dashboard cargado.");
 
+        // --- RUTINA ANTI-ENCUESTAS / POPUPS ---
+        // Verificamos de forma instantánea si hay un modal. Si no lo hay, saltamos esto en 0 segundos.
+        const dialogs = page.locator('.q-dialog, [role="dialog"]');
+        if (await dialogs.count() > 0) {
+            console.log("🧹 Modal estorboso detectado (ej. Encuesta NPS). Procediendo a cerrarlo...");
+            
+            await page.keyboard.press('Escape');
+            await delay(500);
+            await page.keyboard.press('Escape');
+            await delay(500);
+            
+            await page.mouse.click(10, 10);
+            await delay(500);
+
+            const closeButtons = dialogs.locator('button').filter({ has: page.locator('.q-icon, i, svg') });
+            if (await closeButtons.count() > 0) {
+                 await closeButtons.first().click({ force: true }).catch(() => {});
+                 await delay(500);
+            }
+            console.log("✅ Modal cerrado.");
+        }
+        // --------------------------------------
+
         if (actionType === 'IN') {
             await handleClockIn(page);
         } else if (actionType === 'VERIFY_OR_OUT') {
