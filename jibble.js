@@ -231,8 +231,8 @@ async function handleClockIn(page) {
                     await page.locator('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]').first().click({ force: true });
                     await delay(300);
 
-                    // Seleccionar un minuto aleatorio entre 30 y 35 (para que parezca humano)
-                    const randomMin = Math.floor(Math.random() * (35 - 30 + 1) + 30).toString();
+                    // Seleccionar un minuto aleatorio entre 25 y 35 (para que parezca más natural)
+                    const randomMin = Math.floor(Math.random() * (35 - 25 + 1) + 25).toString();
                     await page.locator(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`).first().click({ force: true });
                     await delay(300);
 
