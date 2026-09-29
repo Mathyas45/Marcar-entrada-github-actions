@@ -81,13 +81,11 @@ async function run() {
             
             const emailSelector = '[data-testid="emailOrPhone"]';
             await page.waitForSelector(emailSelector, { timeout: 15000 });
-            await page.click(emailSelector);
-            await page.type(emailSelector, email, { delay: 100 });
+            await page.fill(emailSelector, email);
             
             const pwdSelector = 'input[type="password"]';
             await page.waitForSelector(pwdSelector, { timeout: 10000 });
-            await page.click(pwdSelector);
-            await page.type(pwdSelector, password, { delay: 100 });
+            await page.fill(pwdSelector, password);
             
             const submitBtnSelector = '[data-testid="login-button"]';
             await page.waitForSelector(submitBtnSelector, { timeout: 5000 });
