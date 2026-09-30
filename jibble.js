@@ -222,20 +222,25 @@ async function handleClockIn(page) {
                     }
 
                     // Abrir el selector de tiempo
-                    await page.locator('[data-testid="reminder-time-picker"] input.vue__time-picker-input').first().click({ force: true });
+                    const timeInput = page.locator('[data-testid="reminder-time-picker"] input.vue__time-picker-input').first();
+                    await timeInput.scrollIntoViewIfNeeded();
+                    await timeInput.click({ force: true });
+                    
+                    // IMPORTANTE: Esperar explícitamente a que el menú desplegable sea verdaderamente visible
+                    await page.locator('[data-testid="reminder-time-picker"] ul.hours').first().waitFor({ state: 'visible', timeout: 3000 });
                     await delay(500);
 
-                    // Seleccionar 6
-                    await page.locator('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]').first().click({ force: true });
+                    // Seleccionar 6 (sin force: true, para que el sistema de Jibble registre el clic real)
+                    await page.locator('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]').first().click();
                     await delay(300);
 
                     // Seleccionar un minuto aleatorio entre 25 y 35 (para que parezca más natural)
                     const randomMin = Math.floor(Math.random() * (35 - 25 + 1) + 25).toString();
-                    await page.locator(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`).first().click({ force: true });
+                    await page.locator(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`).first().click();
                     await delay(300);
 
                     // Seleccionar PM
-                    await page.locator('[data-testid="reminder-time-picker"] ul.apms li[data-key="pm"]').first().click({ force: true });
+                    await page.locator('[data-testid="reminder-time-picker"] ul.apms li[data-key="pm"]').first().click();
                     await delay(500);
                     
                     // Cerrar el modal presionando Escape dos veces (una para la lista, otra para el modal)
