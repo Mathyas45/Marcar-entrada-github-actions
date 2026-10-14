@@ -99,7 +99,11 @@ async function run() {
             await page.click(submitBtnSelector, { force: true });
 
             console.log("⏳ Esperando redirección desde Auth0 a la aplicación...");
-            await page.waitForURL('**/app/**', { timeout: 30000, waitUntil: 'domcontentloaded' });
+            try {
+                await page.waitForURL(url => url.pathname.includes('/dashboard') || url.pathname.includes('/app') || (!url.pathname.includes('/login') && !url.hostname.includes('identity')), { timeout: 30000, waitUntil: 'domcontentloaded' });
+            } catch (navError) {
+                console.log("⚠️ Redirección por URL tardía o no detectada, esperando directamente al dashboard (.q-header)...");
+            }
         } else {
             console.log("✅ Acceso directo exitoso mediante Pase VIP.");
         }
