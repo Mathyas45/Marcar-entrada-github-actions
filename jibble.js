@@ -225,27 +225,42 @@ async function handleClockIn(page) {
                         }
                     }
 
-                    // Abrir el selector de tiempo
-                    const timeInput = page.locator('[data-testid="reminder-time-picker"] input.vue__time-picker-input').first();
-                    await timeInput.scrollIntoViewIfNeeded();
-                    await timeInput.click({ force: true });
-                    
-                    // IMPORTANTE: Esperar explícitamente a que el menú desplegable sea verdaderamente visible
-                    await page.locator('[data-testid="reminder-time-picker"] ul.hours').first().waitFor({ state: 'visible', timeout: 3000 });
-                    await delay(500);
-
-                    // Seleccionar 6 (sin force: true, para que el sistema de Jibble registre el clic real)
-                    await page.locator('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]').first().click();
-                    await delay(300);
-
-                    // Seleccionar un minuto aleatorio entre 25 y 35 (para que parezca más natural)
+                    // Generar minuto aleatorio entre 25 y 35 (para que parezca más natural)
                     const randomMin = Math.floor(Math.random() * (35 - 25 + 1) + 25).toString();
-                    await page.locator(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`).first().click();
-                    await delay(300);
+                    const targetTime = `6:${randomMin} pm`;
 
-                    // Seleccionar PM
-                    await page.locator('[data-testid="reminder-time-picker"] ul.apms li[data-key="pm"]').first().click();
-                    await delay(500);
+                    // 1. Escribir directamente en el campo de texto del time picker (más confiable y directo)
+                    const timeInput = page.locator('[data-testid="reminder-time-picker"] input.vue__time-picker-input').first();
+                    if (await timeInput.isVisible()) {
+                        await timeInput.click({ force: true });
+                        await delay(200);
+                        await page.keyboard.press('Control+A');
+                        await page.keyboard.press('Backspace');
+                        await page.keyboard.type(targetTime, { delay: 50 });
+                        await page.keyboard.press('Enter');
+                        await delay(300);
+                    }
+
+                    // 2. Por seguridad, intentar también la selección en el menú desplegable si está disponible
+                    try {
+                        const clockBtn = page.locator('[data-testid="reminder-time-picker"] .dropdown-btn, [data-testid="reminder-time-picker"] .jibble-icon-clock-thin').first();
+                        if (await clockBtn.isVisible()) {
+                            await clockBtn.click({ force: true });
+                            await delay(400);
+                        }
+
+                        const hourLi = page.locator('[data-testid="reminder-time-picker"] ul.hours li[data-key="6"]').first();
+                        if (await hourLi.isVisible().catch(() => false)) {
+                            await hourLi.click({ force: true });
+                            await delay(200);
+                            await page.locator(`[data-testid="reminder-time-picker"] ul.minutes li[data-key="${randomMin}"]`).first().click({ force: true });
+                            await delay(200);
+                            await page.locator('[data-testid="reminder-time-picker"] ul.apms li[data-key="pm"]').first().click({ force: true });
+                            await delay(300);
+                        }
+                    } catch (dropErr) {
+                        console.log("ℹ️ Menú desplegable no interactuable, manteniéndose valor tipeado: " + dropErr.message);
+                    }
                     
                     // Cerrar el modal presionando Escape dos veces (una para la lista, otra para el modal)
                     await page.keyboard.press('Escape');
@@ -253,7 +268,8 @@ async function handleClockIn(page) {
                     await page.keyboard.press('Escape');
                     await delay(500);
                     
-                    console.log(`✅ Salida automática fijada aleatoriamente a las 6:${randomMin} PM.`);
+                    const chipText = await autoClockOutBtn.innerText().catch(() => "");
+                    console.log(`✅ Salida automática fijada a las 6:${randomMin} PM. (Chip muestra: "${chipText.replace(/\s+/g, ' ').trim()}")`);
                 } else {
                     console.log("⚠️ El botón de salida automática no es visible, saltando paso...");
                 }
