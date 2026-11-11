@@ -69,7 +69,7 @@ async function run() {
         // Esperar a ver si entramos al dashboard o nos rebotan al login por Pase VIP expirado
         try {
             await Promise.race([
-                page.waitForSelector('.q-header', { timeout: 15000 }),
+                page.waitForSelector('[data-testid="dashboard-clock-in-out-widget"], .q-header', { timeout: 15000 }),
                 page.waitForSelector('[data-testid="emailOrPhone"]', { timeout: 15000 })
             ]);
         } catch (e) {
@@ -102,14 +102,14 @@ async function run() {
             try {
                 await page.waitForURL(url => url.pathname.includes('/dashboard') || url.pathname.includes('/app') || (!url.pathname.includes('/login') && !url.hostname.includes('identity')), { timeout: 30000, waitUntil: 'domcontentloaded' });
             } catch (navError) {
-                console.log("⚠️ Redirección por URL tardía o no detectada, esperando directamente al dashboard (.q-header)...");
+                console.log("⚠️ Redirección por URL tardía o no detectada, esperando directamente al dashboard...");
             }
         } else {
             console.log("✅ Acceso directo exitoso mediante Pase VIP.");
         }
 
         console.log("⏳ Esperando a que cargue el dashboard...");
-        await page.waitForSelector('.q-header', { timeout: 30000 });
+        await page.waitForSelector('[data-testid="dashboard-clock-in-out-widget"], .q-header', { timeout: 30000 });
         await delay(4000); 
         console.log("✅ Inicio de sesión exitoso y Dashboard cargado.");
 
@@ -152,6 +152,23 @@ async function run() {
     }
 }
 
+/**
+ * Espera a que el nuevo widget de marcación en el dashboard cargue sus botones
+ * y determina si el usuario ya se encuentra con sesión de trabajo activa (Clocked In).
+ */
+async function waitForClockWidget(page) {
+    const clockActions = page.locator('[data-testid="clock-buttons"] .clock-actions');
+    await clockActions.locator('button').first().waitFor({ state: 'visible', timeout: 15000 });
+
+    const clockOutBtn = clockActions.locator('[data-testid="button-clock-out"]').first();
+    const clockedInIndicator = clockActions.locator(
+        '[data-testid="button-clock-out"], [data-testid="button-change-activity"], [data-testid="button-break-start"], [data-testid="button-break-end"]'
+    ).first();
+    const isClockedIn = await clockedInIndicator.isVisible();
+
+    return { clockActions, clockOutBtn, isClockedIn };
+}
+
 async function handleClockIn(page) {
     console.log("🕒 Iniciando proceso de entrada (Clock In)...");
     const MAX_RETRIES = 3;
@@ -160,17 +177,26 @@ async function handleClockIn(page) {
         try {
             console.log(`\n--- Intento de Entrada ${attempt}/${MAX_RETRIES} ---`);
             
-            // Buscar estrictamente el ÚLTIMO botón en la barra superior (Play/Stop) para ignorar el de Sync
-            const actionBtn = page.locator('.q-header .q-btn').last();
-            await actionBtn.waitFor({ state: 'visible', timeout: 15000 });
-            const btnClass = await actionBtn.evaluate(el => el.className);
+            const { clockActions, isClockedIn } = await waitForClockWidget(page);
             
-            if (btnClass.includes('negative') || btnClass.includes('red')) {
-                console.log("⚠️ Ya estás Clocked In (Botón rojo de Detener detectado). No se requiere acción.");
+            if (isClockedIn) {
+                console.log("⚠️ Ya estás Clocked In (Botón Salir / actividad detectado). No se requiere acción.");
                 return;
             }
 
-            console.log("▶️ Botón verde detectado. Haciendo clic para marcar entrada...");
+            // Buscar el botón de entrada en el nuevo widget del dashboard (priorizando data-testid exacto)
+            let actionBtn = clockActions.locator('[data-testid="button-clock-in"]').first();
+            if (await actionBtn.count() === 0) {
+                actionBtn = clockActions.locator(
+                    'button.btn-clock-action:not([data-testid="button-change-activity"]):not([data-testid="button-break-start"]):not([data-testid="button-break-end"]):not([data-testid="button-clock-out"])'
+                ).first();
+            }
+            if (await actionBtn.count() === 0) {
+                actionBtn = clockActions.locator('button').first();
+            }
+
+            await actionBtn.waitFor({ state: 'visible', timeout: 5000 });
+            console.log("▶️ Botón de entrada detectado en el panel. Haciendo clic para marcar entrada...");
             // Forzamos el clic por si algún mensaje de "Bienvenido a Jibble" lo está tapando
             await actionBtn.click({ force: true });
 
@@ -318,19 +344,22 @@ async function handleVerifyOrOut(page) {
         try {
             console.log(`\n--- Intento de Salida ${attempt}/${MAX_RETRIES} ---`);
             
-            // Buscar estrictamente el ÚLTIMO botón en la barra superior (Play/Stop) para ignorar el de Sync
-            const actionBtn = page.locator('.q-header .q-btn').last();
-            await actionBtn.waitFor({ state: 'visible', timeout: 15000 });
-            const btnClass = await actionBtn.evaluate(el => el.className);
+            const { clockActions, clockOutBtn, isClockedIn } = await waitForClockWidget(page);
             
-            if (btnClass.includes('positive') || btnClass.includes('green')) {
-                console.log("✅ El usuario ya está desconectado (Botón verde detectado). Finalizando con éxito...");
+            if (!isClockedIn) {
+                console.log("✅ El usuario ya está desconectado (no aparecen botones de jornada activa). Finalizando con éxito...");
                 return;
             }
 
-            console.log("⏹️ Botón rojo detectado. Forzando Clock Out...");
+            let targetOutBtn = clockOutBtn;
+            if (await targetOutBtn.count() === 0) {
+                targetOutBtn = clockActions.locator('button:has-text("Salir"), button:has-text("Clock out")').first();
+            }
+            await targetOutBtn.waitFor({ state: 'visible', timeout: 5000 });
+
+            console.log("⏹️ Botón Salir detectado. Forzando Clock Out...");
             // Forzamos el clic por si algún mensaje de "Bienvenido a Jibble" lo está tapando
-            await actionBtn.click({ force: true });
+            await targetOutBtn.click({ force: true });
 
             console.log("⚙️ Esperando formulario de confirmación...");
             await delay(2500);
