@@ -64,13 +64,13 @@ async function run() {
     try {
         console.log("🌐 Navegando a Jibble...");
         // Vamos a la página principal y dejamos que Jibble nos redirija al panel correcto
-        await page.goto('https://web.jibble.io/', { waitUntil: 'networkidle' });
+        await page.goto('https://web.jibble.io/', { waitUntil: 'domcontentloaded' });
 
         // Esperar a ver si entramos al dashboard o nos rebotan al login por Pase VIP expirado
         try {
             await Promise.race([
-                page.waitForSelector('[data-testid="dashboard-clock-in-out-widget"], .q-header', { timeout: 15000 }),
-                page.waitForSelector('[data-testid="emailOrPhone"]', { timeout: 15000 })
+                page.waitForSelector('[data-testid="dashboard-clock-in-out-widget"], .q-header', { timeout: 20000 }),
+                page.waitForSelector('[data-testid="emailOrPhone"]', { timeout: 20000 })
             ]);
         } catch (e) {
             console.log("⚠️ Tiempo de espera inicial agotado.");
@@ -327,7 +327,7 @@ async function handleClockIn(page) {
             console.log(`❌ Error en el intento ${attempt}: ${error.message}`);
             if (attempt < MAX_RETRIES) {
                 console.log("🔄 Recargando la página y reintentando en 3 segundos...");
-                await page.reload({ waitUntil: 'networkidle' });
+                await page.reload({ waitUntil: 'domcontentloaded' });
                 await delay(3000);
             } else {
                 throw new Error("Se agotaron los 3 reintentos para Clock In.");
@@ -388,7 +388,7 @@ async function handleVerifyOrOut(page) {
             console.log(`❌ Error en el intento ${attempt}: ${error.message}`);
             if (attempt < MAX_RETRIES) {
                 console.log("🔄 Recargando la página y reintentando en 3 segundos...");
-                await page.reload({ waitUntil: 'networkidle' });
+                await page.reload({ waitUntil: 'domcontentloaded' });
                 await delay(3000);
             } else {
                 throw new Error("Se agotaron los 3 reintentos para Clock Out.");
